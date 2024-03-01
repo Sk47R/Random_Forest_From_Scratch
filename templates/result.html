@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diagnosis Result</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #007bff;
+      }
+      .result {
+        text-align: center;
+        font-size: 20px;
+        margin-top: 20px;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: #f8d7da;
+        color: #721c24;
+      }
+      .result.malignant {
+        background-color: #f8d7da;
+        color: #721c24;
+      }
+      .result.benign {
+        background-color: #d4edda;
+        color: #155724;
+      }
+      .back-btn {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin-top: 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      .back-btn:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Diagnosis Result</h1>
+      <div class="result {{ diagnosis|lower }}">
+        The diagnosis is: {{ diagnosis }}
+      </div>
+      <a href="/" class="back-btn">Back to Diagnosis</a>
+    </div>
+  </body>
+</html>
